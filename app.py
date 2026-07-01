@@ -92,6 +92,9 @@ def determine_label(score: float) -> str:
         return "Confidently Human"
 
 # --- Endpoints ---
+@app.route('/', methods=['GET'])
+def health_check():
+    return jsonify({"status": "Provenance Guard API is active and listening."}), 200
 
 @app.route('/submit', methods=['POST'])
 @limiter.limit("1 per minute")

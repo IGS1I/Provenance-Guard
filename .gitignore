@@ -3,6 +3,9 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# DBs
+provenance_guard.db
+
 # C extensions
 *.so
 
