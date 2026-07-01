@@ -5,8 +5,6 @@ There is an API content submission endpoint that accepts a piece of text-based c
 
 The endpoint returns a structures response including the attributtion result, confidence score, and the transparency label text that would be shown to the user for them to know whether to believe that the content is human or AI.
 
-False positives are hardened against and not acceptable.
-
 ## Tool Stack
 
 | Component | Tool | Notes |
@@ -42,7 +40,7 @@ The detection signals should be comparing the content to AI's method of writing,
 
 The explanation is meant to demistify uncertainty of Provenance Guard's classification.
 
-If Provenance Guard misclassifies a human writer's work as AI (a false positive), the system would have received an appeal. Based on that it will inspect the results from its tools, rescore the content, and present it to the user. If the work is still misclassified, the user should explain more in the appeal as to what makes it human content and the system will check, mark it as such, return the result from its new information and tools, and keep that knwoledge going forward.
+If Provenance Guard misclassifies a human writer's work as AI (a false positive), the system would have received an appeal. Based on that it will inspect the results from its tools, rescore the content, and present it to the user. If the work is still misclassified, the user should explain more in the appeal as to what makes it human content and the system will check against a more computationally expensive heuristics tool and a known AI-generation bit of content, mark it as such, return the result from its new information and tools, and keep that knwoledge going forward.
 
 ## Transparency Labels
 
@@ -50,11 +48,11 @@ If Provenance Guard misclassifies a human writer's work as AI (a false positive)
 Explain the transparency labels going to be used, how the model why they fit well, and which use cases they fit with. Explain variants if existing.
 -->
 
-**Uncertain** - content the system is terribly unconfident about. (confidence score < 0.50)
+**Confidently AI** - content the system believes it should have gotten correct (confidence score < 0.45)
 
-**Mostly confident** - content the system believes it should have gotten correct (0.50 <= confident score > 0.90)
+**Uncertain** - content the system is terribly unconfident about. ( 0.45 <= confidence score <= 0.54)
 
-**Fully confident** - content the system believes is exactly what it was labeled/classified as (confident score >= 0.90)
+**Confidently Human** - content the system believes is exactly what it was labeled/classified as (confidence score > 0.54)
 
 These labels are chosen to properly convey to the user/creator how likely the content they submitted is either human or AI. The confidence score plays the biggets role in deciding the label and scrutiny is taken on how confident Provenence Guard should be when classifying teh content.
 
