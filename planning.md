@@ -1,8 +1,6 @@
 ## Project Description
 A backend system that any creative sharing platform could plug into to classify submitted content, score confidence in that classification, surface a transparency label to users, and handle appeals from creators who believe they've been misclassified.
 
-## LLM Prompt
-
 ## Detection Pipeleine: Multi-signal
 <!--
 Name and explain 2 or more detetcion signals: what they capture, what tool they use, and what they miss.
@@ -42,3 +40,13 @@ Example of how AI will be used for this project.
 Input:
 
 Desired output:
+
+# Stretch Features
+
+## Ensemble Detection
+
+## Provenence Certficate
+
+## Analytics Dashboard
+
+## Multi-Modal Support

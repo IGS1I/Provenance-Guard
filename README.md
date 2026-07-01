@@ -46,3 +46,24 @@ Input:
 Output:
 
 Result:
+
+## Stretch Features
+
+### Ensemble Detection
+<!--
+Describe 3 or more distinct detection signals with a documented weighting or voting strategy explaining how conflicts between signals are resolved. Demo or source shows individual signal scores alongside the ensemble result.
+-->
+### Provenence Certficate
+<!--
+Describe the certificate design and what verification step a creator completes to earn it. Demo or source shows a verified label appearing on content and distinguishable from the standard transparency label.
+-->
+
+### Analytics Dashboard
+<!--
+show a view with at least 3 metrics: detection pattern (e.g., ratio of AI vs. human verdicts), appeal rate, and one additional metric of the student's choosing.
+-->
+
+### Multi-Modal Support
+<!--
+ Show a non-text content type (e.g., image description or structured metadata) being processed through the attribution pipeline and returning a result. README describes how the pipeline handles the second content type and what signals are used for it.
+-->
