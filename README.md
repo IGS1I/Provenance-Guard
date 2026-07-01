@@ -3,9 +3,19 @@ A backend system that any creative sharing platform could plug into to classify 
 
 ## Detection Pipeline
 
+## Architecture
+
 ## Confidence Scoring & Uncertainty
 
+<!--
+How does AI convey uncertainty while expressing scored confidence.
+-->
+
 ## Transparency Labels
+
+<!--
+Must include the verbatim text of all three label variants (high-confidence AI, high-confidence human, uncertain) as a quoted string or a markdown table. A screenshot or mockup is welcome as an extra, but the written text is what's required — a screenshot alone is not enough.
+-->
 
 These are the outputted labels that all social platforms and their users should be able to understand at first glance:
 
@@ -17,7 +27,13 @@ These are the outputted labels that all social platforms and their users should 
 
 ## Rate Limiting
 
-Here described is the usage limits chosen based on [holder]:
+Here described is the usage limits chosen based on usage preference:
+
+Provenance Guard will only be allowed to be used infinitely by creators with a one minute delay inbetween. Appeals can only occur three times per classification.
+
+Summary:
+- **1-minute delay per classification**
+- **5 appeals per classification**
 
 ## Misc
 
